@@ -22,5 +22,12 @@ public class DemoApplication {
         public String echo(@PathVariable String str) {
             return str+",world";
         }
+        
+        @RequestMapping(value = "/", method = RequestMethod.GET)
+        public String root() {
+            return "this is root";
+        }
+        
+        
     }
 }
