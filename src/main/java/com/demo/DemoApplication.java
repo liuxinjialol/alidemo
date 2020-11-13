@@ -41,7 +41,7 @@ public class DemoApplication {
        
         @RequestMapping(value = "/hello/{id}", method = RequestMethod.GET)
         public String hello(@PathVariable String id) {
-        	return "hello,"+restTemplate.getForObject("http://user/get/" + id, String.class);
+        	return "hello,"+restTemplate.getForObject("http://user:8900/get/" + id, String.class);
         }
         
         
